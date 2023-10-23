@@ -1399,7 +1399,7 @@ body {
     background-color: #151515; }
   @media only screen and (max-width: 62em) {
     .section-about--1 {
-      padding: 10rem 0 10rem; } }
+      padding: 4rem 0 10rem; } }
   @media only screen and (max-width: 48em) {
     .section-about--1 {
       padding: 2rem 0 10rem; } }
