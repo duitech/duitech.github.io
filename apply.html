@@ -338,10 +338,10 @@
 
                 <label for="e-form__phone" class="e-form__label">phone number <sup>*</sup></label>
                 <p class="paragraph paragraph--e-form">Please provide a phone number.</p>
-                <input type="number" name="phone_number" class="e-form__input" id="e-form__phone" required>
+                <input type="tel" name="phone_number" class="e-form__input" id="e-form__phone" pattern="^(+254|0)([17][0-9]|[1][0-1]){1}[0-9]{1}[0-9]{6}$" required>
 
                 <label for="e-form__company" class="e-form__label">company name? <sup>*</sup></label>
-                <input type="text" name="company name" class="e-form__input" id="e-form__company" pattern="[a-zA-Z0-9]+" required>
+                <input type="text" name="company name" class="e-form__input" id="e-form__company" required>
 
                 <label for="e-form__industry" class="e-form__label">which industry best applies to your venture? <sup>*</sup></label>
                     <select id="e-form__industry" name="which industry best applies to your venture?" class="e-form__select" value="Select an option" required>
