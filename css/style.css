@@ -1116,7 +1116,7 @@ body {
 
 .header {
   width: 100%;
-  padding: 1.5rem 8rem;
+  padding: 2.6rem 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1135,7 +1135,7 @@ body {
     .header {
       display: none; } }
   .header__logo-img {
-    width: 28%; }
+    width: 50%; }
   .header__logo-navigation {
     position: absolute;
     top: 4%;
