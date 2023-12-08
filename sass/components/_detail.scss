@@ -1,0 +1,91 @@
+.about-detail{
+    padding: 5rem 0;
+}
+
+.detail{
+    height: 70rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(tab-port){
+        flex-direction: column;
+        height: auto;
+    }
+
+    @include respond(phone){
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+        //height: 120vh;
+    }
+
+    &__image{
+        width: 33%;
+        height: 70rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        padding: 20rem 5rem 5rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-white, .15);
+
+        @include respond(tab-port){
+            width: 100%;
+            border-radius: 2rem;
+            height: 40vh;
+        }
+
+        &--one{
+            background-image: linear-gradient(rgba($color-black, .3), rgba($color-black, .3)),
+            url('../img/approach.jpg');
+
+            @include respond(tab-port){
+                margin-bottom: 5rem;
+            }
+        }
+
+        &--two{
+            background-image: linear-gradient(rgba($color-black, .3), rgba($color-black, .3)),
+            url('../img/companies.jpg');
+
+            @include respond(tab-port){
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    &__box{
+        width: 60%;
+        height: 70rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+
+        @include respond(tab-port){
+            width: 100%;
+            height: auto;
+        }
+
+        @include respond(phone){
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        &-text{
+            width: 46%;
+
+            @include respond(phone){
+                width: 100%;
+            }
+        }
+
+        &--one{
+            @include respond(tab-port){
+                margin-bottom: 6rem;
+            } 
+        }
+    }
+}

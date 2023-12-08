@@ -1,0 +1,230 @@
+.navigation{
+    visibility: hidden;
+    opacity: 0;
+    //display: none;
+
+    @include respond(tab-land){
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @include respond(tab-port){
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__checkbox{
+        display:none;
+    }
+
+    &__button{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        background-color: $color-white;
+        z-index: 2000;
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(tab-port){
+            top: 4rem;
+            right: 5rem;
+        }
+    }
+
+    &__background{
+        width: 35%;
+        height: 52rem;
+        //border-radius: 2rem;
+        position: fixed;
+        top: 0rem;
+        right: 0rem;
+        background-color: #323234;
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .8s ease;
+        //transform: scale(80);
+
+        @include respond(tab-land){
+            width: 50%;
+            height: 100%;
+        }
+
+        @include respond(tab-port){
+            width: 50%;
+            height: 100%;
+        }
+        
+        @include respond(phone){
+            width: 100%;
+            height: 100%;
+        }
+        
+    }
+
+    &__nav{
+        height: 60%;
+        width: 50%;
+        position: fixed;
+        top: 6%;
+        right: 12rem;
+        z-index:1500;
+        padding: 0 15rem;;
+        //opacity: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .8s ease;
+
+        @include respond(tab-land){
+            //height: 44%;
+            //width: 30%;
+            right: 12rem;
+        }
+
+        @include respond(phone){
+            //height: 44%;
+            //width: 30%;
+            right: 52%;
+            padding: 0 4rem;
+        }
+    }
+
+    &__logo{
+        width: 26rem;
+        padding: 2rem 2rem;
+    }
+
+    &__social{
+        list-style: none;
+        margin-top: 3rem;
+        padding: 0 4rem;
+        display: block;
+        width: 100rem;
+
+        &-item{
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        &-icon{
+            color: $color-white;
+            font-size: 3.6rem;
+        }
+    }
+
+    &__list{
+        
+        list-style: none;
+        text-align: left;
+    }
+
+    &__item{
+        margin: 1.5rem;
+        white-space: nowrap;
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            list-style: none;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: $color-white;
+            //background-image: linear-gradient(120deg, transparent 0%, transparent 50%,  $color-white 50%);
+            //background-size: 223%;
+            transition: all .4s;
+        }
+
+                    &:hover{
+                color: $accent-color;
+            }
+
+       /* &:hover,
+        &:active{
+            background-position: 100%;
+            color: $accent-color;
+            transform: translateX(.4rem);
+        }*/
+
+        span{
+            margin-right: 1rem;
+            display: inline-block;
+        }
+    }
+    &__checkbox:checked ~ &__background{
+        //transform: scale(8);
+        visibility: visible;
+        opacity: 1;
+    }
+    &__checkbox:checked ~ &__nav{
+        //width: 10%;
+        visibility: visible;
+        opacity: 1;
+        z-index: 1500;
+    }
+
+    &__icon{
+        position: relative;
+        margin-top: .2rem;
+        
+
+        &,
+        &::after,
+        &::before{
+            width: 3rem;
+            height: 2px;
+            background-color: #323234;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .3s ease;
+        }
+        
+
+        &::after,
+        &::before{
+            content: "";
+        }
+        &::after{
+            top: .8rem;
+        }
+        &::before{
+            top: -.8rem;
+        }
+
+        
+    }
+
+    &__button:hover &__icon::before{
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after{
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon::after{
+        transform: rotate(-135deg);
+        top: 0;
+        left: 0;
+    }
+
+    &__checkbox:checked + &__button &__icon::before{
+        transform: rotate(135deg);
+        top: 0;
+        left: 0;
+    }
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+}

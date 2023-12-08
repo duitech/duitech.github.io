@@ -1,0 +1,88 @@
+.teammate{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 0;
+
+    @include respond(tab-port){
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__details{
+        width: 30%;
+        margin-bottom: 5rem;
+
+        @include respond(tab-port){
+            width: 40%;
+        }
+
+        @include respond(phone){
+            width: 80%;
+            margin-bottom: 7rem;
+        }
+
+        &--hide{
+            //display: none;
+            //visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__photo{
+        background-image: url('../img/passport.jpg');
+        background-position: top;
+        background-size: cover;
+        width: 100%;
+        height: 35rem;
+        margin-bottom: 2rem;
+
+        @include respond(tab-port){
+            height: 50rem;
+        }
+
+        @include respond(phone){                                                                                
+            height: 50rem;
+        }
+
+        &--one{
+            background-image: url('../img/ceo.jpg');
+        }
+
+        &--two{
+            background-image: url('../img/customer_relations.jpg');
+        }
+
+        &--three{
+            background-image: url('../img/project_manager.jpg');
+        }
+
+        &--four{
+            background-image: url('../img/tech_lead.jpg');
+        }
+
+        &--five{
+            background-image: url('../img/business_development.jpg');
+        }
+    }
+    
+
+    &__designation{
+        color: #c1c1c1;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-top: -1rem;
+        text-transform: uppercase;
+    }
+
+    &--one{
+        //margin-bottom: 6rem;
+        border-top: 1px solid #999;
+        padding-top: 7rem;
+
+        @include respond(phone){
+            //margin-bottom: 6rem;
+        }
+    }
+}

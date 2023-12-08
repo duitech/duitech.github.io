@@ -349,7 +349,7 @@ body {
 .bg-media {
   position: relative;
   width: 100%;
-  height: 88%;
+  height: 90%;
   overflow: hidden;
   margin: auto;
   top: 10rem;
@@ -411,7 +411,7 @@ body {
   color: #ffa500;
   text-transform: capitalize;
   position: absolute;
-  top: 5rem;
+  top: 3rem;
   left: 5rem; }
 
 .counters {

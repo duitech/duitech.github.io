@@ -1,0 +1,114 @@
+.footer{
+    background-color: #151515;
+    padding: 10rem 8rem;
+
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        padding: 5rem 0;
+
+        @include respond(phone){
+            flex-direction: column;
+            
+        }
+
+        &-one{
+            width: 40%;
+
+            @include respond(tab-land){
+                width: 70%;
+                //width: 30%;
+            }
+
+            @include respond(phone){
+                //display: block;
+                width: 100%;
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-two{
+            width: 10%;
+
+            @include respond(tab-land){
+                display: none;
+            }
+        }
+        &-three{
+            width: 10%;
+
+            @include respond(tab-land){
+                display: none;
+            }
+        }
+
+        &-four{
+            width: 25%;
+
+            @include respond(phone){
+                width: 100%;
+            }
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: #999;
+        font-size: 1.6rem;
+        text-transform: capitalize;
+    }
+
+    &__navigation{
+        list-style: none;
+
+        &-item{
+            padding-bottom: .9rem;
+        }
+
+        &-link{
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #999;
+            text-transform: capitalize;
+        }
+    }
+
+    &__input{
+        background-color: #151515;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #999;
+        display: block;
+        padding: 0 0 1.5rem 0;
+        font-size: 1.5rem;
+        color: $color-white;
+        margin-bottom: 1.4rem;
+    }
+
+    &__button{
+        font-size: 1.8rem;
+        color: $color-black;
+        text-decoration: none;
+        border: 1px solid #323234;
+        padding: .5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    &__social{
+        list-style: none;
+        margin-top: 2rem;
+
+        &-item{
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        &-icon{
+            color: $color-white;
+            font-size: 3.6rem;
+        }
+    }
+}
