@@ -1,0 +1,31 @@
+.counters{
+    font-size: 1.8rem;
+    color: $color-white;
+    counter-reset: counter-name;
+    padding: 5rem 10rem;
+    
+    &--invest{
+        color: $text-color;
+    }
+ }
+ .section{
+     position: relative;
+     margin-bottom: 1.5rem
+ }
+ .section::before{
+     counter-increment: counter-name;
+     content: counter(counter-name);
+     position: absolute;
+     left: -3rem;
+     top: 0rem;
+     //background-color: #fff;
+     height: 2.5rem;
+     width: 2.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     //border: 2px solid $accent-color;
+     color: $accent-color;
+     box-sizing: border-box;
+     //border-radius: 50%;
+ }

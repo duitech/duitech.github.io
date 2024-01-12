@@ -1,0 +1,184 @@
+.e-form{
+    width: 80%;
+    margin: auto;
+    background-color: $color-white;
+    padding: 10rem 10rem;
+
+    @include respond(phone){
+        width: 95%;
+        padding: 10rem 6rem;
+    }
+
+    &__group{
+
+    }
+
+    &__label{
+        font-size: 1.8rem;
+        //font-weight: 700;
+        text-transform: capitalize;
+        color: $text-color;
+        display: block;
+        margin-bottom: .4rem;
+
+        sup{
+            color: $accent-color;
+            font-size: 2rem;
+        }
+    }
+
+    &__input{
+        display: block;
+        width: 90%;
+        border: 1px solid #cbd6e2;
+        background-color: #f5f8fa;
+        padding: .65rem;
+        font-size: 1.3rem;
+        color: #343433;
+        font-family: inherit;
+        height: 4rem;
+        margin-bottom: 2rem;
+
+        @include respond(tab-port){
+            width: 100%
+        }
+
+        &--name{
+            display: inline-block;
+            width: 43.7%;
+            margin-right: 2rem;
+
+            @include respond(tab-port){
+                width: 90%
+            }
+
+            @include respond(tab-port){
+                width: 100%;
+            }
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 1px solid $brand-color;
+        }
+
+        &:focus:invalid{
+            border-bottom: 1px solid $accent-color;
+        }
+
+        &::-webkit-input-placeholder{
+            color: #343433;
+            text-transform: capitalize;
+        }
+    }
+
+    &__textarea{
+        width: 95%;
+        border: 1px solid #cbd6e2;
+        background-color: #f5f8fa;
+        padding: .65rem;
+        font-size: 1.3rem;
+        color: #343433;
+        font-family: inherit;
+        margin-bottom: 2rem;
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 1px solid $brand-color;
+        }
+
+        &:focus:invalid{
+            border-bottom: 1px solid $accent-color;
+        }
+
+        &::-webkit-input-placeholder{
+            color: #343433;
+            text-transform: capitalize;
+        }
+    }
+
+    &__button{
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        padding: 1.5rem 4rem;
+        text-decoration: none;
+        border: none;
+        border-radius: 7px;
+        display: block;
+        text-shadow: 0 .1rem 0 $color-black;
+        font-weight: 700;
+        box-shadow: inset 0 .5px 0 0 $color-black;
+        background-color: $accent-color;
+        color: $color-white;
+        margin-top: 3rem;
+        cursor: pointer;
+    }
+
+    &__options{
+        font-size: 1.4rem;
+        color: $text-color;
+        font-weight: 400;
+    }
+
+    &__checkbox{
+        margin-bottom: 1rem;
+    }
+
+}
+
+#e-form__field{
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: rgba($color-black,.05);
+    outline: none;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}
+
+#e-form__country{
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: rgba($color-black,.05);
+    outline: none;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}
+
+#e-form__model{
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: rgba($color-black,.05);
+    outline: none;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}
+
+#e-form__invest{
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: rgba($color-black,.05);
+    outline: none;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}
+
+#e-form__industry{
+    margin-bottom: 1.5rem;
+    border: none;
+    background-color: rgba($color-black,.05);
+    outline: none;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}

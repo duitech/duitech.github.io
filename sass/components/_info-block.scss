@@ -1,0 +1,53 @@
+.info-block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 0;
+
+    @include respond(phone) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    &__one{
+        height:55rem;
+        width: 45%;
+        box-shadow: 0 1.5rem 4rem rgba($color-white, .15);
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+
+        .heading-secondary{
+            margin-bottom: auto;
+        }
+
+        @include respond(phone) {
+            width: 85%;
+            margin-bottom: 10rem;
+        }
+    }
+
+    &__two{
+        height: 55rem;
+        width: 45%;
+        box-shadow: 0 1.5rem 4rem rgba($color-white, .15);
+
+        padding: 5rem; 
+        display: flex;
+        flex-direction: column;
+
+        .heading-secondary{
+            margin-bottom: auto;
+        }
+
+        @include respond(phone) {
+            width: 85%;
+        }
+    }
+}
+
+.info-image{
+    width: 100%;
+    height: 100%;
+}
